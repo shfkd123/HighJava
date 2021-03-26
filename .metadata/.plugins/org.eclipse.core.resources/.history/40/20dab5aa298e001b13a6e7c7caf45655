@@ -18,7 +18,7 @@ public class HorseThreadProgram {
 
 	경기가 끝나면 등수를 기준으로 정렬하여 출력한다.*/
 	
-
+	 //쓰레드 
 	public static void main(String[] args) {
 		Horse[] horse = new Horse[] {
 			new Horse("1번말", 1),
