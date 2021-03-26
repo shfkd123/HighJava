@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;kr.or.ddit.sqlmap&apos; to &apos;assignment_iBatis_Board/res&apos;&#x0D;&#x0A;- Original project: &apos;f_iBatisTest&apos;&#x0D;&#x0A;- Destination element: &apos;assignment_iBatis_Board/res&apos;&#x0D;&#x0A;- Original element: &apos;f_iBatisTest/res/kr.or.ddit.sqlmap&apos;" description="Copy package" destination="=assignment_iBatis_Board/res" element1="/res&lt;kr.or.ddit.sqlmap" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1616759953956" version="1.0"/>
+</session>

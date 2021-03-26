@@ -81,8 +81,8 @@ public class BoardMain {
 		List<BoardVO> boardList = boardService.AllBoardList();
 		
 		for (BoardVO bv : boardList) {
-			System.out.println(bv.getBoard_no() + "\t" + bv.getBoard_title()
-								+ bv.getBoard_writer() + bv.getBoard_date() + bv.getBoard_content());
+			System.out.println(bv.getBoard_no() + "\t" + bv.getBoard_title() + "\t"
+								+ bv.getBoard_writer() + "\t" + bv.getBoard_date() + "\t" + bv.getBoard_content());
 		}
 		
 		System.out.println("-----------------------------------------------------------------");
@@ -101,8 +101,8 @@ public class BoardMain {
 		BoardVO bv = new BoardVO();
 		List<BoardVO> boardList = boardService.getSearchBoard(title);
 
-		System.out.println(bv.getBoard_no() + "\t" + bv.getBoard_title() + bv.getBoard_writer() + bv.getBoard_date()
-				+ bv.getBoard_content());
+		System.out.println(bv.getBoard_no() + "\t" + bv.getBoard_title() + "\t" + bv.getBoard_writer() + "\t" + bv.getBoard_date()
+		+ "\t" + bv.getBoard_content());
 	}
 		
 	

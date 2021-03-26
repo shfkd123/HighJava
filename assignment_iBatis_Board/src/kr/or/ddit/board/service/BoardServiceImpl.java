@@ -101,15 +101,15 @@ public class BoardServiceImpl implements IBoardService {
 
 	@Override
 	public List<BoardVO> getSearchBoard(String board_title) {
-		List<BoardVO> memList = new ArrayList<>();
+		List<BoardVO> boardList = new ArrayList<>();
 
 		try {
-			memList = boardDao.getSearchBoard(smc, board_title);
+			boardList = boardDao.getSearchBoard(smc, board_title);
 
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
-		return memList;
+		return boardList;
 	}
 
 }

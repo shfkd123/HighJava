@@ -136,3 +136,9 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-03-26 20:15:57.305
 !MESSAGE No repository found at jar:file:/C:/Users/pc24/Desktop/tern.repository-1.2.1.zip!/.
+
+!ENTRY org.eclipse.jface.text 2 0 2021-03-26 21:05:53.219
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2021-03-26 21:05:53.220
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
