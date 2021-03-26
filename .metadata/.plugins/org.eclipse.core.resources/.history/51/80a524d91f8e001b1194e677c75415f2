@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+			
+<sqlMap namespace="board">
+<!-- namespace는 한 덩어리의 데이터에 이름을 붙여 충돌 가능성을 줄이고, 쉽게 참조할 수 있게 하는 개념 -->
+	
+	
+	
+	<!-- board_no/board_title/board_writer/board_date/board_content -->
+	<!-- boardNo/boardTitle/boardWriter/boardDate/boardContent -->
+
+<!-- 
+
+	id 속성
+	- 작성된 쿼리를 식별하기 위한 이름 설정한다.
+	- 동일한 이름을 사용할 수 없다.
+	- 해당 태그를 호출할 때 <sqlMap> 태그의 namespace와 연결하여 사용하는 이름
+	
+	parameterClass 속성
+	- 쿼리 실행에 필요한 값을 포함하고 있는 클래스의 타입을 설정한다.
+	- sql문에 사용될 데이터가 들어있는 객체를 지정한다.
+	- 기본 자료형, ValueObject, Map 타입을 설정할 수 있다.
+	- typeAlias로 지정한 alias명을 사용할 수 있다.
+	
+	
+	resultClass 속성
+	- 쿼리 실행 후 조회된 값을 담는 클래스의 타입을 설정한다.
+	- SELECT 쿼리일 때만 사용된다.
+	- 기본자료형, ValueObject, HashMap 타입을 설정할 수 있다.
+
+ -->
+
+	<!-- 게시판 작성 -->
+	<insert id="insertBoard" parameterClass="kr.or.ddit.board.vo.BoardVO">
+		insert into jdbc_board 
+		(board_no, board_title, board_writer, board_date, board_content)
+		values (board_seq.nextval, #BOARD_TITLE#, #BOARD_WRITER#, sysdate, #BOARD_CONTENT#)
+	</insert>
+	
+	
+	<!-- 작성글 수정 제목/작성자/내용 -->
+	<update id="updateBoard" parameterClass="kr.or.ddit.board.vo.BoardVO">
+		update jdbc_board
+			set board_title = #BOARD_TITLE#
+				,board_writer = #BOARD_WRITER#
+				,board_content = #BOARD_CONTENT#		
+			where board_no = #BOARD_NO# 
+	</update>
+	
+	
+	<!-- 게시판 삭제 -->
+	<delete id="deleteBoard" parameterClass="String">
+	delete from jdbc_board where board_no = #aaa#
+	</delete>
+	
+		
+	<!-- selectAllBoard 작성 -->
+	
+	<!-- 방법 1) 전체 자료 출력 [select 응답결과가 여러개] -->
+<!-- 	<resultMap class="kr.or.ddit.board.vo.BoardVO" id="boardMap">
+	property(매개변수 명)
+		<result property="board_no" column="BOARD_NO"/>
+		<result property="board_title" column="BOARD_TITLE"/>
+		<result property="board_writer"  column="BOARD_WRITER"/>
+		<result property="board_date" column="BOARD_DATE"/>
+		<result property="board_content" column="BOARD_CONTENT"/>
+	</resultMap>
+	 -->
+	<select id="getBoardAll" resultMap="boardMap">
+		select * from jdbc_board
+	</select>
+	
+<!-- 	
+	방법2) 전체 자료 출력 [select 응답결과가 여러개]
+	<select id="getBoardAll" resultClass="kr.or.ddit.board.vo.BoardVO.">
+	boardNo/boardTitle/boardWriter/boardDate/boardContent
+		select board_no as boardNo
+			   ,board_title as boardTitle
+			   ,board_writer as boardWriter
+			   ,board_date as boardDate
+			   ,baord_content as boardContent
+		from jdbc_board
+	</select> -->
+	
+	
+	<!-- board_no으로 게시글이 있는지 없는지 체크 [select 응답결과가 1개]-->
+	<select id="getBoard" parameterClass="String" resultClass="int">
+		select count(*) as cnt
+		from jdbc_board where board_no = #BOARD_NO#
+	</select>
+	
+	
+
+
+ 	<!-- board_title로 게시글 검색 -->
+ 	<select id="getSearchBoard" parameterClass="BoardVO" resultMap="boardMap">
+		select * from jdbc_board
+		where 1=1
+		<isNotEmpty property="board_title">
+		where board_tilte like '%' || #BOARD_TITLE# || '%'
+		</isNotEmpty>
+	</select>
+
+
+	
+</sqlMap>	
+			
