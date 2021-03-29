@@ -57,7 +57,7 @@ public class HorseThreadProgram {
 class Horse extends Thread {
 	private String HorseName;
 	private int HorseRank = 1;
-
+      
 	//생성자
 	public Horse(String horseName, int horseRank) {
 		this.HorseName = horseName;
