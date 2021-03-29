@@ -21,7 +21,7 @@ public class BoardVO {
 	public String getBoard_title() {
 		return board_title;
 	}
-	public void setBoard_tilte(String board_title) {
+	public void setBoard_title(String board_title) {
 		this.board_title = board_title;
 	}
 	public String getBoard_writer() {

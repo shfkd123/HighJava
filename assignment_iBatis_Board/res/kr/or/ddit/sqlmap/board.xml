@@ -50,7 +50,7 @@
 	
 	<!-- 게시판 삭제 -->
 	<delete id="deleteBoard" parameterClass="String">
-	delete from jdbc_board where board_no = #aaa#
+	delete from jdbc_board where board_no = #board_no#
 	</delete>
 	
 		

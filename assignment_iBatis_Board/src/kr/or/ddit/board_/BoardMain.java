@@ -108,6 +108,7 @@ public class BoardMain {
 	
 	//게시판 삭제
 	private void deleteBoard() {
+		AllBoard();
 		System.out.println();
 		System.out.println("삭제할 게시판 번호를 입력하세요.");
 		String board_no = scan.next();
@@ -142,17 +143,22 @@ public class BoardMain {
 
 		System.out.println("변경할 제목 입력 >>");
 		String title = scan.next();
+		
 		System.out.println("변경할 작성자 입력 >>");
 		String writer = scan.next();
+		
+		scan.nextLine(); // 입력버퍼 비우기
 		System.out.println("변경할 내용 입력 >>");
 		String content = scan.next();
 		
 		BoardVO bv = new BoardVO();
-		bv.setBoard_tilte(title);
+		bv.setBoard_no(board_no);
+		bv.setBoard_title(title);
 		bv.setBoard_writer(writer);
 		bv.setBoard_content(content);
 		
 		int cnt = boardService.updateBoard(bv);
+		
 		if (cnt > 0) {
 			System.out.println("수정 성공!!");
 		} else {
@@ -173,7 +179,7 @@ public class BoardMain {
 		String content = scan.next();
 		
 		BoardVO bv = new BoardVO();
-		bv.setBoard_tilte(title);
+		bv.setBoard_title(title);
 		bv.setBoard_writer(writer);
 		bv.setBoard_content(content);
 		
