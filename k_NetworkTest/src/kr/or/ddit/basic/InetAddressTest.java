@@ -5,6 +5,8 @@ import java.net.UnknownHostException;
 
 public class InetAddressTest {
 	public static void main(String[] args) throws UnknownHostException {
+		
+		//ip => 네트워크주소 / 호스트주소
 		//URI(User Resource Identifier) 식별자 -> 중복X
 		//URL(User Resource Locator)을 알고 있으면 해당 리소스로 접근해서 정보를 가져올 수 있음
 		//InetAddress 클래스 => IP주소를 다루기 위한 클래스
@@ -21,7 +23,7 @@ public class InetAddressTest {
 		//자기 자신 컴퓨터의  IP정보 가져오기
 		System.out.println("=========자기 자신 컴퓨터의  IP정보 가져오기=========");
 		InetAddress localIp = InetAddress.getLocalHost();
-		System.out.println("내 컴퓨터의 Host Name => " + localIp.getHostName());
+		System.out.println("내 컴퓨터의 Host Name => " + localIp.getHostName()); //-->내 자신의 호스트 이름
 		System.out.println("내 컴퓨터의 Host Address => " + localIp.getHostAddress());
 		
 		System.out.println();

@@ -36,6 +36,7 @@
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\pc24\Desktop\네트워크.zip"/>
 			<item value="C:\Users\pc24\Desktop\Board_Singleton.zip"/>
 			<item value="C:\Users\pc24\Desktop\Board_MVC.zip"/>
 			<item value="C:\Users\pc24\Desktop\자바코드들.zip"/>
