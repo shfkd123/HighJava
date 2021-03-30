@@ -94,7 +94,7 @@
 	
 	
 	<!-- board_title로 게시글 검색 -->
-	<select id="getSearchBoard" parameterClass="BoardVO" resultClass="kr.or.ddit.board.vo.BoardVO">
+	<select id="getSearchBoard" parameterClass="String" resultClass="kr.or.ddit.board.vo.BoardVO">
 		select * from jdbc_board
 		where board_title like '%' || #board_title# || '%'
 	</select>

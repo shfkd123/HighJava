@@ -98,11 +98,12 @@ public class BoardMain {
 		System.out.println(" NO\t제목\t작성자\t날짜\t\t\t내용");
 		System.out.println("-----------------------------------------------------------------");
 		
-		BoardVO bv = new BoardVO();
 		List<BoardVO> boardList = boardService.getSearchBoard(title);
 
-		System.out.println(bv.getBoard_no() + "\t" + bv.getBoard_title() + "\t" + bv.getBoard_writer() + "\t" + bv.getBoard_date()
-		+ "\t" + bv.getBoard_content());
+		for (BoardVO bv : boardList) {
+			System.out.println(bv.getBoard_no() + "\t" + bv.getBoard_title() + "\t"
+								+ bv.getBoard_writer() + "\t" + bv.getBoard_date() + "\t" + bv.getBoard_content());
+		}
 	}
 		
 	
@@ -144,6 +145,7 @@ public class BoardMain {
 		System.out.println("변경할 제목 입력 >>");
 		String title = scan.next();
 		
+		scan.nextLine(); // 입력버퍼 비우기
 		System.out.println("변경할 작성자 입력 >>");
 		String writer = scan.next();
 		
@@ -173,10 +175,15 @@ public class BoardMain {
 		
 		System.out.println("제목 >>");
 		String title = scan.next();
+		scan.nextLine(); // 입력버퍼 비우기
+		
 		System.out.println("글쓴이 >>");
 		String writer = scan.next();
+		scan.nextLine(); // 입력버퍼 비우기
+		
 		System.out.println("내용 >>");
 		String content = scan.next();
+		scan.nextLine(); // 입력버퍼 비우기
 		
 		BoardVO bv = new BoardVO();
 		bv.setBoard_title(title);
