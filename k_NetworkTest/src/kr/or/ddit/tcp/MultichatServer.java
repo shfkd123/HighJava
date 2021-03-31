@@ -138,5 +138,8 @@ public class MultichatServer {
 				System.out.println("현재 접속자 수는 " + clients.size() + "명 입니다.");
 			}
 		}
-	}	
+	}
+	public static void main(String[] args) {
+		new MultichatServer().startServer();
+	}
 }

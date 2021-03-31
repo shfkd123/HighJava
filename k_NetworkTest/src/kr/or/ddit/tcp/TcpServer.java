@@ -29,7 +29,7 @@ public class TcpServer {
 		//접속한 Socket의 getOutputStream()메서드를 이용하여 구한다.
 		OutputStream out = socket.getOutputStream(); //데이터를 주고 받는것은 stream을 통해 한다. 
 		
-		DataOutputStream dos = new DataOutputStream( out); //보조스트림 -기본 타입(int, double, float...등등) 의 사이즈를 잘 조절하기 위해 
+		DataOutputStream dos = new DataOutputStream(out); //보조스트림 -기본 타입(int, double, float...등등) 의 사이즈를 잘 조절하기 위해 
 		dos.writeUTF("어서 오세요..."); //메시지 보내기
 		System.out.println("메시지를 보냈습니다.");
 		
