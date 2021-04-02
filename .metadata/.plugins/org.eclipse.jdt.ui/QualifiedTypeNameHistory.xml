@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.net.URL"/>
-<fullyQualifiedTypeName name="java.lang.Readable"/>
-<fullyQualifiedTypeName name="kr.or.ddit.tcp.Receiver"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -10,7 +7,6 @@
 <fullyQualifiedTypeName name="kr.or.ddit.tcp.Sender"/>
 <fullyQualifiedTypeName name="kr.or.ddit.tcp.MultichatServer.ServerReceiver"/>
 <fullyQualifiedTypeName name="java.lang.Iterable"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
 <fullyQualifiedTypeName name="java.io.DataInputStream"/>
@@ -57,7 +53,11 @@
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="kr.or.ddit.http.MyHttpServer.HttpHandler"/>
 <fullyQualifiedTypeName name="kr.or.ddit.http.MyHttpServer"/>
-<fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
-<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 </qualifiedTypeNameHistroy>

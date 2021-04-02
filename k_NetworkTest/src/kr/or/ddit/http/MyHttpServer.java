@@ -164,6 +164,11 @@ public class MyHttpServer {
 									.getContentTypeFor(fileName);
 				//fileName으로 파일 유형을 파악한다. --> MIME타입으로 
 				
+				if(contentType == null) {
+					contentType = "text/css";
+				}
+				
+				
 				System.out.println("contentType => " + contentType);
 				
 				File file = new File(fileName);
