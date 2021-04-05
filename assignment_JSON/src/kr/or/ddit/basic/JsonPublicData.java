@@ -19,7 +19,7 @@ public class JsonPublicData {
 	private String startIdx = "1"; // 요청시작위치
 	private String endIdx = "5";
 	// 요청종료위치
-	private int year = 2018; //년도
+	private int year = 2015; //년도
 	 
 	/**
 	 * JSON
