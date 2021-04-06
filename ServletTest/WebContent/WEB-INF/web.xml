@@ -36,8 +36,6 @@
     <servlet-class>kr.or.ddit.basic.T04_ErrorHandler</servlet-class>
   </servlet>
   
- 
-  
   <servlet-mapping>
 	<servlet-name>ErrorHandler</servlet-name>
 	<url-pattern>/ErrorHandler</url-pattern>
@@ -52,4 +50,24 @@
   	<error-code>404</error-code>
   	<location>/ErrorHandler</location>
   </error-page>
+  
+    <servlet>
+    <servlet-name>T05_ServletCookieTest</servlet-name>
+    <servlet-class>kr.or.ddit.basic.T05_ServletCookieTest</servlet-class>
+  	</servlet>
+  	
+  <servlet-mapping>
+    <servlet-name>T05_ServletCookieTest</servlet-name>
+    <url-pattern>/T05_ServletCookieTest</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+    <servlet-name>T06_ServletSessionTest</servlet-name>
+    <servlet-class>kr.or.ddit.basic.T06_ServletSessionTest</servlet-class>
+  	</servlet>
+  	
+  <servlet-mapping>
+    <servlet-name>T06_ServletSessionTest</servlet-name>
+    <url-pattern>/T06_ServletSessionTest</url-pattern>
+  </servlet-mapping>
 </web-app>          
