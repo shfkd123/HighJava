@@ -30,7 +30,8 @@ public class T02_ServletTest extends HttpServlet {
 		// Post방식으로 넘어오는 Body데이터를 인코딩처리함.
 		// get방식은 톰캣의 URIEncoding 설정을 이용함.
 		// 반드시 request에서 값을 가져오기 전에 먼저 설정해야 적용됨.
-		req.setCharacterEncoding("utf-8"); // setCharacterEncoding("utf-8") 호출해서 원하는 Encoding방식 넣어준다.
+		
+		//req.setCharacterEncoding("utf-8"); // setCharacterEncoding("utf-8") 호출해서 원하는 Encoding방식 넣어준다.
 		
 		//요청 정보로부터 name값을 가져옴
 		String name = req.getParameter("name"); //필요한 데이터를 꺼내온다. 
@@ -38,7 +39,7 @@ public class T02_ServletTest extends HttpServlet {
 		System.out.println("name => " + name);
 		
 		//응답메시지 인코딩 설정(Content-Type의 charset=UTF-8)
-		resp.setCharacterEncoding("UTF-8");
+		//resp.setCharacterEncoding("UTF-8");
 		
 		//응답 메시지의 컨텐트 타입 설정
 		resp.setContentType("text/plain"); //지금은 단순한 text파일로 타입 설정 /Html, img .. 등등 원하는 파일로 타입 설정해주면 된다. 

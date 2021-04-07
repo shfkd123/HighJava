@@ -155,6 +155,7 @@ public class T05_ServletCookieTest extends HttpServlet{
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html");
 		
+
 		PrintWriter out = resp.getWriter();
 		
 		String title = "쿠키설정 예제";

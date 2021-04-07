@@ -84,7 +84,7 @@ public class T06_ServletSessionTest extends HttpServlet {
 				+ visitCount + "</td></tr></table>"
 				+ "</body></html>" );
 		
-		session.invalidate(); //세션ID 삭제됨. --> 나중에 로그아웃시에 많이 사용
+		session.invalidate(); //세션ID 삭제됨. --> 나중에 로그아웃시에 많이 사용 
 		
 	}
 	
