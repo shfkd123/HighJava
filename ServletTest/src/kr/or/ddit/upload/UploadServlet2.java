@@ -48,11 +48,10 @@ public class UploadServlet2 extends HttpServlet {
 			factory.setRepository(
 					new File(
 					System.getProperty("java.io.tmpdir")));
-			System.out.println("임시경로 : " 
-					+ System.getProperty("java.io.tmpdir"));
+			System.out.println("임시경로 : " + System.getProperty("java.io.tmpdir")); //파일의 용량 크기가 넘으면 이곳, 임시경로에 저장이된다.
+			//내가 다른  D_Other폴더에 저장하고 싶으면 그곳의 경로를 작성하면 된다. 
 			
-			ServletFileUpload upload = 
-					new ServletFileUpload(factory);
+			ServletFileUpload upload = new ServletFileUpload(factory);
 			upload.setFileSizeMax(MAX_FILE_SIZE); //파일 1개당 최대 크기
 			upload.setSizeMax(MAX_REQUEST_SIZE); //요청 파일 최대 크기
 			
@@ -61,7 +60,7 @@ public class UploadServlet2 extends HttpServlet {
 					+ File.separator + UPLOAD_DIR;
 			File uploadDir = new File(uploadPath);
 			if(!uploadDir.exists()) {
-				uploadDir.mkdir(); //없으면 생성 
+				uploadDir.mkdir(); //작성한 경로가 없으면 생성한다. 
 			}
 			
 			List<FileItem> formItems;
@@ -73,8 +72,7 @@ public class UploadServlet2 extends HttpServlet {
 					for(FileItem item : formItems) { //조회
 						if(!item.isFormField()) {// FormField가 아닌 경우 -> 파일인 경우... 업로드 작업 시작
 							// 전체경로를 제외한 파일명만 추출하기
-							String fileName = 
-									new File(item.getName()).getName(); //처음의 getName에는 경로가 들어옴. 거기에 다시 getName하면 ~.jpg 파일 이름이 넘어옴 (substr해도 됨)
+							String fileName = new File(item.getName()).getName(); //처음의 getName에는 경로가 들어옴. 거기에 다시 getName하면 ~.jpg 파일 이름이 넘어옴 (substr해도 됨)
 							String filePath = 
 								uploadPath + File.separator + fileName; //separator는 /를 뜻함. ====> 하나의 경로를 만들음. 
  							File storeFile = new File(filePath); //경로를 가지고 파일객체를 만듦.
