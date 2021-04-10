@@ -54,10 +54,10 @@
 <fullyQualifiedTypeName name="kr.or.ddit.member.service.MemberServiceImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.member.vo.MemberVO"/>
 <fullyQualifiedTypeName name="java.net.URLEncoder"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="kr.or.ddit.board.service.BoardServiceImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.board.service.IBoardService"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="kr.or.ddit.board.vo.BoardVO"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>
