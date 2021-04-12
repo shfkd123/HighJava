@@ -47,7 +47,19 @@ public interface IMemberService {
 	 */
 	public int deleteMember(String memId);
 
+	/**
+	 * 객체에 담긴 자료를 이용하여 회원을 검색하느 ㄴ메서드
+	 * @param mv 검색할 자료가 들어있는 MemberVO 객체
+	 * @return 검색된 결과를 담은 List
+	 */
 	List<MemberVO> getSearchMember(MemberVO mv);
+
+	/**
+	 * 주어진 회원ID에 해당하는 회원정보를 조회하는 메서드
+	 * @param memId 검색할 회원ID
+	 * @return 해당 회원ID에 해당하는 회원정보
+	 */
+	public MemberVO getMember(String memId);
 	
 	
 	

@@ -72,4 +72,13 @@ public interface IMemberDao {
 	 */
 	public List<MemberVO> getSearchMember(SqlMapClient smc,MemberVO mv)
 						throws SQLException;
+
+	/**
+	 * 
+	 * @param smc SqlMapClient 객체
+	 * @param memId
+	 * @return
+	 * @throws SQLException
+	 */
+	public MemberVO getMember(SqlMapClient smc, String memId) throws SQLException;
 }
