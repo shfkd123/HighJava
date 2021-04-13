@@ -7,8 +7,8 @@
 <title>신규회원 등록</title>
 </head>
 <body>
-	<form action="insert.do" method="post">
-		<table>
+	<form action="insert.do" method="post" enctype="multipart/form-data">
+		<table border="1">
 			<tr>
 				<td>I	D:</td>
 				<td><input type="text" name="memId" value=""></td>
@@ -24,6 +24,10 @@
 			<tr>
 				<td>주	소:</td>
 				<td><textarea rows="5" cols="10" name="memAddr"></textarea></td>
+			</tr>
+			<tr>
+				<td>첨부파일</td>
+				<td><input type="file" name="atchFile"></td> <!-- enctype="multipart/form-data" -->
 			</tr>
 		</table>
 		<input type="submit" value="회원 등록">

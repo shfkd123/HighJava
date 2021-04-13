@@ -11,7 +11,7 @@
 <title>회원정보 변경</title>
 </head>
 <body>
-	<form action="insert.do" method="post">
+	<form action="update.do" method="post">
 		<input type="hidden" name="memId" value="<%=memVO.getMemId()%>">
 		<table>
 			<tr>
