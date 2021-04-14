@@ -63,5 +63,6 @@
 	<!-- 	<sqlMap resource="kr/or/ddit/basic/member.xml"/> -->
 	<!-- <sqlMap resource="ibatis/member/memberMain.xml"/> -->
 	<sqlMap resource="kr/or/ddit/sqlmap/member.xml"/> 
+	<sqlMap resource="kr/or/ddit/sqlmap/atchFile.xml"/> 
 </sqlMapConfig>
 

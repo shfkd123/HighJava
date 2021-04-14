@@ -5,10 +5,16 @@ import java.net.URLEncoder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.fileupload.FileItem;
+
 import kr.or.ddit.comm.handler.CommandHandler;
+import kr.or.ddit.comm.service.AtchFileServiceImpl;
+import kr.or.ddit.comm.service.IAtchFileService;
 import kr.or.ddit.member.service.IMemberService;
 import kr.or.ddit.member.service.MemberServiceImpl;
+import kr.or.ddit.member.vo.AtchFileVO;
 import kr.or.ddit.member.vo.MemberVO;
+import kr.or.ddit.util.FileUploadRequestWrapper;
 
 public class InsertMemberHandler implements CommandHandler{
 
@@ -31,6 +37,14 @@ public class InsertMemberHandler implements CommandHandler{
 		if (req.getMethod().equals("GET")) { // GET
 			return VIEW_PAGE;
 		} else if (req.getMethod().equals("POST")) { //Post방식인 경우isRedirect를 한다.
+			
+			FileItem item = ((FileUploadRequestWrapper)req).getFileItem("atchFile");
+			
+			AtchFileVO atchFileVO = new AtchFileVO();
+			
+			IAtchFileService fileService = AtchFileServiceImpl.getInstance();
+			atchFileVO = fileService.saveAtchFile(item); //파일 저장 후 atchFileVO에 담아준다. 
+			
 			// 1. 요청파라미터 정보 가져오기
 			String memId = req.getParameter("memId");
 			String memName = req.getParameter("memName");
@@ -46,6 +60,7 @@ public class InsertMemberHandler implements CommandHandler{
 			mv.setMemName(memName);
 			mv.setMemTel(memTel);
 			mv.setMemAddr(memAddr);
+			mv.setAtchFileId(atchFileVO.getAtchFileId());
 
 			int cnt = memberService.insertMember(mv);
 
