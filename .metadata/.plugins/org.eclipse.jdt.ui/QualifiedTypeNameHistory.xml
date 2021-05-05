@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSessionAttributeListener"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSessionBindingListener"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.MySessionBindingListener"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletInputStream"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletOutputStream"/>
@@ -18,10 +16,6 @@
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Part"/>
 <fullyQualifiedTypeName name="sun.rmi.server.Dispatcher"/>
-<fullyQualifiedTypeName name="java.net.URLEncoder"/>
-<fullyQualifiedTypeName name="kr.or.ddit.board.service.BoardServiceImpl"/>
-<fullyQualifiedTypeName name="kr.or.ddit.board.service.IBoardService"/>
-<fullyQualifiedTypeName name="kr.or.ddit.board.vo.BoardVO"/>
 <fullyQualifiedTypeName name="java.lang.Process"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
@@ -34,7 +28,6 @@
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-<fullyQualifiedTypeName name="com.sun.corba.se.impl.activation.CommandHandler"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletConfig"/>
 <fullyQualifiedTypeName name="com.sun.xml.internal.fastinfoset.sax.Properties"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
@@ -42,7 +35,6 @@
 <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="kr.or.ddit.member.vo.MemberVO"/>
-<fullyQualifiedTypeName name="kr.or.ddit.comm.handler.CommandHandler"/>
 <fullyQualifiedTypeName name="kr.or.ddit.member.service.IMemberService"/>
 <fullyQualifiedTypeName name="kr.or.ddit.member.service.MemberServiceImpl"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequestWrapper"/>
@@ -52,12 +44,20 @@
 <fullyQualifiedTypeName name="sun.security.jca.GetInstance"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.util.UUID"/>
-<fullyQualifiedTypeName name="kr.or.ddit.util.FileUploadRequestWrapper"/>
-<fullyQualifiedTypeName name="org.apache.commons.fileupload.FileItem"/>
-<fullyQualifiedTypeName name="kr.or.ddit.comm.service.IAtchFileService"/>
-<fullyQualifiedTypeName name="kr.or.ddit.comm.service.AtchFileServiceImpl"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="kr.or.ddit.comm.dao.AtchFileDaoImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.comm.dao.IAtchFileDao"/>
 <fullyQualifiedTypeName name="kr.or.ddit.member.vo.AtchFileVO"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.FileItem"/>
+<fullyQualifiedTypeName name="com.sun.corba.se.impl.activation.CommandHandler"/>
+<fullyQualifiedTypeName name="kr.or.ddit.comm.handler.CommandHandler"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.vo.BoardVO"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.service.IBoardService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.service.BoardServiceImpl"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.FileItem"/>
+<fullyQualifiedTypeName name="kr.or.ddit.util.FileUploadRequestWrapper"/>
+<fullyQualifiedTypeName name="kr.or.ddit.comm.vo.AtchFileVO"/>
+<fullyQualifiedTypeName name="kr.or.ddit.comm.service.IAtchFileService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.comm.service.AtchFileServiceImpl"/>
+<fullyQualifiedTypeName name="java.net.URLEncoder"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

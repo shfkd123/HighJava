@@ -12,6 +12,8 @@ public class BoardVO {
 	private String board_date;
 	private String board_content;
 	
+	private long atchFileId = -1;
+	
 	public String getBoard_no() {
 		return board_no;
 	}
@@ -41,6 +43,12 @@ public class BoardVO {
 	}
 	public void setBoard_content(String board_content) {
 		this.board_content = board_content;
+	}
+	public long getAtchFileId() {
+		return atchFileId;
+	}
+	public void setAtchFileId(long atchFileId) {
+		this.atchFileId = atchFileId;
 	}
 	
 	@Override
