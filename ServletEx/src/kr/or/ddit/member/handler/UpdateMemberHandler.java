@@ -71,7 +71,6 @@ private static final String VIEW_PAGE = "/WEB-INF/view/member/updateForm.jsp";
          
       }else { // POST 방식인 경우
          
-         //import 멀로 해야해..?ㅠㅠ
          FileItem item = ((FileUploadRequestWrapper)req).getFileItem("atchFile");
          
          

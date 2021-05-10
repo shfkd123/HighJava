@@ -16,6 +16,7 @@ import kr.or.ddit.comm.service.AtchFileServiceImpl;
 import kr.or.ddit.comm.service.IAtchFileService;
 import kr.or.ddit.comm.vo.AtchFileVO;
 import kr.or.ddit.util.FileUploadRequestWrapper;
+import sun.print.resources.serviceui;
 
 public class boardHandler implements CommandHandler{
 
@@ -183,7 +184,7 @@ public class boardHandler implements CommandHandler{
 			
 			IBoardService service = BoardServiceImpl.getInstance();
 			
-			BoardVO bv = service.getBoardBoard(BoardNm);
+			BoardVO bv = service
 			
 			if(bv.getAtchFileId() > 0) {
 				AtchFileVO fileVO = new AtchFileVO();
@@ -202,27 +203,9 @@ public class boardHandler implements CommandHandler{
 		
 		// 모든 게시글 조회
 		
-		// 요청 페이지 번호
-		int pageNo = 
-			req.getParameter("pageNo") == null ? 
-			1 : Integer.parseInt(req.getParameter("pageNo"));
-		
-		PagingVO pagingVO = new PagingVO();
-		
 		IBoardService service = BoardServiceImpl.getInstance();
-		
-		int totalCount = service.getAllBoardBoardListCount();
-		pagingVO.setTotalCount(totalCount);
-		pagingVO.setCurrentPageNo(pageNo);
-		pagingVO.setCountPerPage(15);
-		pagingVO.setPageSize(5);
-
-		List<BoardBoardVO> list = service.getAllBoardBoard(pagingVO);
-		
-		req.setAttribute("totalCount", totalCount);
-		req.setAttribute("list", list);
-		req.setAttribute("pv", pagingVO);
-		
+		List<BoardVO> list = service.AllBoardList();
+		req.setAttribute("list", list);	
 		return "/WEB-INF/view/board/BoardBoardList.jsp";
 	}
 
