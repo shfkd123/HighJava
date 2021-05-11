@@ -112,4 +112,16 @@ public class BoardServiceImpl implements IBoardService {
 		return boardList;
 	}
 
+	@Override
+	public BoardVO getBoardInfo(String board_no) {
+		BoardVO bv = null;
+		
+		try {
+			bv = boardDao.getBoardInfo(smc, board_no);
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		return bv;
+	}
+
 }

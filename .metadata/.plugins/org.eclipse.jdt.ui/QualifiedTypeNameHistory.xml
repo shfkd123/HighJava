@@ -23,7 +23,6 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="kr.or.ddit.comm.handler.NullHandler"/>
 <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
@@ -49,15 +48,16 @@
 <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.FileItem"/>
 <fullyQualifiedTypeName name="com.sun.corba.se.impl.activation.CommandHandler"/>
 <fullyQualifiedTypeName name="kr.or.ddit.comm.handler.CommandHandler"/>
-<fullyQualifiedTypeName name="kr.or.ddit.board.vo.BoardVO"/>
-<fullyQualifiedTypeName name="kr.or.ddit.board.service.IBoardService"/>
-<fullyQualifiedTypeName name="kr.or.ddit.board.service.BoardServiceImpl"/>
 <fullyQualifiedTypeName name="org.apache.commons.fileupload.FileItem"/>
 <fullyQualifiedTypeName name="kr.or.ddit.util.FileUploadRequestWrapper"/>
 <fullyQualifiedTypeName name="kr.or.ddit.comm.vo.AtchFileVO"/>
 <fullyQualifiedTypeName name="kr.or.ddit.comm.service.IAtchFileService"/>
 <fullyQualifiedTypeName name="kr.or.ddit.comm.service.AtchFileServiceImpl"/>
-<fullyQualifiedTypeName name="java.net.URLEncoder"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="sun.print.resources.serviceui"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.service.IBoardService"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.service.BoardServiceImpl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="kr.or.ddit.board.vo.BoardVO"/>
+<fullyQualifiedTypeName name="java.net.URLEncoder"/>
 </qualifiedTypeNameHistroy>

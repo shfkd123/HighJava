@@ -7,7 +7,7 @@
 <title>게시글 등록</title>
 </head>
 <body>
-	<form action="insertBoard.do" method="post">
+	<form action="/Servlet_Myboard/BoardInsertServlet" method="post">
 		<table>
 			<!-- board_no, board_title, board_writer, board_date, board_content  -->
 			<tr>

@@ -24,7 +24,6 @@
 			<td>글쓴이</td>
 			<td>날짜</td>
 			<td>내용</td>
-			<td align="center" colspan="2">게시글관리</td>
 		</tr>
 		<%
 		int boardSize = boardList.size();
@@ -34,12 +33,10 @@
 		 %>
 		 <tr>
 		 	<td><%=boardList.get(i).getBoard_no() %></td>
-		 	<td><%=boardList.get(i).getBoard_title() %></td>
+		 	<td><a href="/Servlet_Myboard/BoardUpdateServlet?board_no=<%=boardList.get(i).getBoard_no() %>"><%=boardList.get(i).getBoard_title() %></a></td>
 		 	<td><%=boardList.get(i).getBoard_writer() %></td>
 		 	<td><%=boardList.get(i).getBoard_date() %></td>
 		 	<td><%=boardList.get(i).getBoard_content() %></td>
-		 	<td><button type="button">게시글 수정</button></td>
-		 	<td><button type="button">게시글 삭제</button></td>
 		 </tr>
 
 		 <%
@@ -54,10 +51,10 @@
 		
 	%>
 		<tr align="center">
-			<td colspan="7"><a href="boardList.do">[게시글 목록]</a></td>
+			<td colspan="7"><a href="/Servlet_Myboard/BoardListServlet">[게시글 목록]</a></td>
 		</tr>
 		<tr align="center">
-			<td colspan="7"><a href="insertBoard.do">[게시글 글쓰기]</a></td>
+			<td colspan="7"><a href="/Servlet_Myboard/BoardInsertServlet">[게시글 글쓰기]</a></td>
 		</tr>
 	</table>
 	

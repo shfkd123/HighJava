@@ -99,6 +99,16 @@
 		where board_title like '%' || #board_title# || '%'
 	</select>
 	
+	<!-- 게시글 상세 조회 -->
+	<select id="getBoardInfo" resultClass="kr.or.ddit.board.vo.BoardVO" parameterClass="String">
+	 	SELECT BOARD_NO			boardNo
+	 	       BOARD_TITLE      boardTitle
+	 	       BOARD_WRITER     boardWriter
+	 	       BOARD_DATE       boardDate
+	 	       BOARD_CONTENT    boardContent
+		FROM JDBC_BOARD
+		WHERE BOARD_NO = #boardNo#
+	</select>
 	
 </sqlMap>	
 			

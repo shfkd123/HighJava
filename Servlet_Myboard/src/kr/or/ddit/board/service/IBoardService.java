@@ -45,5 +45,12 @@ public interface IBoardService {
 	 * @return 작업성공 : 1, 작업실패 : 0
 	 */
 	List<BoardVO> getSearchBoard(String board_title);
+	
+	/**
+	 * 게시글 단건 조회
+	 * @param board_no
+	 * @return
+	 */
+	public BoardVO getBoardInfo(String board_no);
 
 }

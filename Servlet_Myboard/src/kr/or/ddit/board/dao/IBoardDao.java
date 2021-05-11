@@ -62,5 +62,14 @@ public interface IBoardDao {
 	 * @throws SQLException JDBC 관련 예외 객체 
 	 */
 	public List<BoardVO> getSearchBoard(SqlMapClient smc, String board_title) throws SQLException;
+	
+	/**
+	 * 게시글 하나 조회
+	 * @param smc
+	 * @param board_no
+	 * @return
+	 * @throws SQLException
+	 */
+	public BoardVO getBoardInfo(SqlMapClient smc, String board_no) throws SQLException;
 
 }

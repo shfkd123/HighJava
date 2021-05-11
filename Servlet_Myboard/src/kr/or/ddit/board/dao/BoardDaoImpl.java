@@ -79,4 +79,10 @@ public class BoardDaoImpl implements IBoardDao {
 		return boardList;
 	}
 
+	@Override
+	public BoardVO getBoardInfo(SqlMapClient smc, String board_no) throws SQLException {
+		BoardVO bv = (BoardVO)smc.queryForObject("board.getBoardInfo", board_no);
+		return null;
+	}
+
 }
